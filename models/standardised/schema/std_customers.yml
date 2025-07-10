@@ -4,7 +4,7 @@ models:
     - name: std_customers
       description: "Cleaned/standardised customer information"
       columns:
-          - name: id
+          - name: customer_id
             description: "The primary key for this table"
             tests:
                 - unique

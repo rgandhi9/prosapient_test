@@ -5,4 +5,4 @@ SELECT
     quantity,
     transaction_date
 FROM
-    public.transactions
+    {{ source('public', 'transactions') }}

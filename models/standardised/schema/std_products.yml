@@ -4,7 +4,7 @@ models:
     - name: std_products
       description: "Cleaned/standardised product information"
       columns:
-          - name: id
+          - name: product_id
             description: "The primary key for this table"
             tests:
                 - unique
