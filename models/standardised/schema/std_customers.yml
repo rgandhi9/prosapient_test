@@ -12,6 +12,19 @@ models:
           - name: first_name
           - name: last_name
           - name: email
+          - name: gender
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - Agender
+                    - Bigender
+                    - Female
+                    - Genderfluid
+                    - Genderqueer
+                    - Male
+                    - Non-binary
+                    - Polygender
           - name: age
           - name: country_code
           - name: signup_date
