@@ -12,6 +12,8 @@ models:
           - name: first_name
           - name: last_name
           - name: email
+            data_tests:
+              - is_valid_email # custom data test
           - name: gender
             data_tests:
               - not_null
@@ -25,6 +27,10 @@ models:
                     - Male
                     - Non-binary
                     - Polygender
+                  config:
+                    severity: warn # Config'd to warn as you may have additional values and don't want Prod jobs to fail
           - name: age
+            data_tests:
+              - not_null
           - name: country_code
           - name: signup_date
