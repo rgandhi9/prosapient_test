@@ -6,7 +6,7 @@ models:
     - name: std_transactions
       description: "Cleaned/standardised transactions information"
       columns:
-          - name: id
+          - name: transaction_id
             description: "The primary key for this table"
             tests:
                 - unique
