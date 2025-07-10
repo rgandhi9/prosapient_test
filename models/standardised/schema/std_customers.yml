@@ -32,5 +32,9 @@ models:
           - name: age
             data_tests:
               - not_null
+              - dbt_expectations.expect_column_min_to_be_between:
+                  min_value: 0
+                  config:
+                    severity: warn
           - name: country_code
           - name: signup_date
