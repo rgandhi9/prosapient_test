@@ -2,7 +2,9 @@
 
 /*
 To-dos:
-    --  Create a macro like normalise_string to be used for all letter fields for consistency
+    -- Create a macro like normalise_string to be used for all letter fields for consistency
+    -- Possibly creating macro for validating currency_code
+    -- While the PK is unique, it's possible to have duplicates - worth creating a Surrogate key to identify these so they can be removed downstream
 */
 
 

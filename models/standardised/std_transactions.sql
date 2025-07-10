@@ -1,3 +1,5 @@
+-- See std_customers for data cleaning
+
 SELECT
     id,
     customer_id,
