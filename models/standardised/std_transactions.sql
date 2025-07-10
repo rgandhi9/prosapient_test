@@ -1,7 +1,7 @@
 -- See std_customers for data cleaning
 
 SELECT
-    id,
+    id AS transaction_id,
     customer_id,
     product_id,
     quantity,
