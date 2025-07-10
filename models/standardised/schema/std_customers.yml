@@ -30,6 +30,7 @@ models:
                   config:
                     severity: warn # Config'd to warn as you may have additional values and don't want Prod jobs to fail
           - name: age
+            description: "Customer's age valiated to be greater than 0"
             data_tests:
               - not_null
               - dbt_expectations.expect_column_min_to_be_between:
@@ -37,4 +38,5 @@ models:
                   config:
                     severity: warn
           - name: country_code
+            description: "Upper case 2 letter ISO country codes"
           - name: signup_date

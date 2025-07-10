@@ -1,5 +1,7 @@
 version: 2
 
+# See std_customers for how data tests can be used
+
 models:
     - name: std_products
       description: "Cleaned/standardised product information"
