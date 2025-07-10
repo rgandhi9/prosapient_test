@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: std_transactions
+      description: "Cleaned/standardised transactions information"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
