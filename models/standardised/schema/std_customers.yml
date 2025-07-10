@@ -1,0 +1,17 @@
+version: 2
+
+models:
+    - name: std_customers
+      description: "Cleaned/standardised customer information"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: first_name
+          - name: last_name
+          - name: email
+          - name: age
+          - name: country_code
+          - name: signup_date
