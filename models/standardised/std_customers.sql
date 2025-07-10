@@ -10,8 +10,8 @@ To-dos:
 
 SELECT
     CAST(id AS bigint) AS customer_id,
-    CAST(first_name AS varchar) AS first_name,
-    CAST(last_name AS varchar) AS last_name,
+    CAST(first_name AS varchar(100)) AS first_name,
+    CAST(last_name AS varchar(100)) AS last_name,
     CAST(email AS varchar) AS email,
     CAST(gender AS varchar) AS gender,
     CAST(age AS int) AS age,

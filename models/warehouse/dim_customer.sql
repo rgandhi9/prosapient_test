@@ -2,6 +2,7 @@ SELECT
     customer_id,
     first_name,
     last_name,
+    -- COALESCE(first_name, ' ', last_name) AS customer_name,
     email,
     gender,
     age,

@@ -2,8 +2,8 @@
 
 SELECT
     id AS product_id,
-    name,
-    category,
+    name AS product_name,
+    category AS product_category,
     price_gbp
 FROM
     {{ source('public', 'products') }}
