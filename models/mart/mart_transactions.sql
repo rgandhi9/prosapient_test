@@ -13,7 +13,7 @@ SELECT
     p.product_category,
     p.price_gbp,
     t.quantity,
-    p.price_gbp * t.quantity AS revenue_gbp,
+    p.price_gbp * t.quantity AS spend_gbp,
     t.transaction_date
 FROM
     {{ ref('fct_transaction') }} AS t
