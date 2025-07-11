@@ -15,7 +15,8 @@
 - https://public.tableau.com/app/profile/r.g5623/viz/Book1_17521731317210/Dashboard1?publish=yes
 
 ### Further Development
-- Ensuring all models have `yml` files for testing and casting datatypes
+- Ensuring all models have `yml` files for testing and casting datatypes as well as naming of tests and appropriate descriptions.
 - CI/CD workflows to be added so that commands like `dbt test` will run with GitHub actions when a commit is pushed.
 - Unit test to test logical workflows e.g. we can mock a user's data and have that flow though the `standardised` models to the `mart` models to ensure customer segmentation logic is behaving as expected - [https://docs.getdbt.com/docs/build/unit-tests]
 - Setup PROD environment with jobs running on required cadence.
+- Confirgure Slack notifications for dbt run errors.
