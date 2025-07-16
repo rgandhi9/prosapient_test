@@ -20,11 +20,7 @@ thresholds AS (
 
         -- Frequency thresholds
         PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY transaction_frequency) AS freq_p25,
-        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY transaction_frequency) AS freq_p75,
-
-        -- Diversity thresholds
-        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY product_diversity) AS div_p25,
-        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY product_diversity) AS div_p75
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY transaction_frequency) AS freq_p75
     FROM analytics_base
 )
 
@@ -52,11 +48,11 @@ SELECT
 
     -- Diversity segment
     CASE
-        WHEN cm.product_diversity >= t.div_p75 THEN 'Diverse'
-        WHEN cm.product_diversity >= t.div_p25 THEN 'Moderate'
-        ELSE 'Focused'
+        WHEN transaction_frequency = 1 AND product_diversity = 1 THEN 'Moderate' -- We lack the data to define a proper category
+        WHEN 1.5*product_diversity <= transaction_frequency THEN 'Focused'
+        WHEN 1.25*product_diversity <= transaction_frequency THEN 'Moderate'
+        ELSE 'Diverse'
     END AS diversity_segment
-
 FROM analytics_base cm
 CROSS JOIN thresholds t
 
